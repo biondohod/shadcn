@@ -74,3 +74,13 @@
     @apply bg-background text-foreground;
   }
 }
+html {
+  @apply min-h-screen;
+}
+body {
+  @apply min-h-screen bg-indigo-50;
+}
+
+#root {
+  @apply max-w-5xl mx-auto min-h-screen py-16;
+}
