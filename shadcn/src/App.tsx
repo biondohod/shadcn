@@ -218,7 +218,7 @@ const App: FC = () => {
         <Carousel className="w-full max-w-xs">
           <CarouselContent>
             {Array.from({ length: 8 }).map((_, index) => (
-              <CarouselItem key={index} className="basis-1/2">
+              <CarouselItem key={index} className="basis-1/2 md:basis-1/2">
                 <div className="p-1">
                   <Card>
                     <CardContent className="flex aspect-square items-center justify-center p-6">
@@ -235,13 +235,18 @@ const App: FC = () => {
           <CarouselNext />
         </Carousel>
       </div>
-      {/* Прокручивается только на 1 элемент а не на то, сколько указано, спросить у копилота в чем дело. */}
-      <div className="">
-        <h2 className="text-indigo-900 text-xl font-bold mb-3 text-center">
-          Carousel with multiple visible items. works properly only with odd
-          numbers idk why
+
+      <div className="w-full mt-12">
+      <h2 className="text-indigo-900 text-xl font-bold mb-12">
+          vertical carousel
         </h2>
-        <Carousel className="w-full max-w-xs" orientation="vertical">
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          orientation="vertical"
+          className="w-full max-w-xs"
+        >
           <CarouselContent className="-mt-1 h-[200px]">
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem key={index} className="pt-1 md:basis-1/2">
